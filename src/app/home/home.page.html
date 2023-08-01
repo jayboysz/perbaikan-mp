@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      FORM PENDAFTARAN MAHASISWA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+     <ion-input label="Nama" placeholder="Masukan Nama" [(ngModel)]="form.Nama" labelPlacement="floating" fill="outline"></ion-input>
+     <br>
+     <ion-input label="Prodi"  placeholder="Masukan Prodi Yang Dituju" [(ngModel)]="form.Prodi" labelPlacement="floating" fill="outline"></ion-input>
+     <br>
+     <ion-input label="Tempat Lahir"  placeholder="Masukan Tempat Lahir" [(ngModel)]="form.TempatLahir"labelPlacement="floating" fill="outline"></ion-input>
+     <br>
+     <ion-input label="Tahun Lahir" [(ngModel)]="form.Tahunlahir" labelPlacement="floating" fill="outline" type="date"></ion-input>
+     <br>
+     <ion-item>
+      <ion-label position="floating">Jenis Kelamin</ion-label>
+      <ion-select [(ngModel)]="form.Jeniskelamin">
+        <ion-select-option value="Laki-laki">Laki-laki</ion-select-option>
+        <ion-select-option value="Perempuan">Perempuan</ion-select-option>
+      </ion-select>
+    </ion-item>
+     <br>
+     <ion-input label="Asal Sekolah" placeholder="Masukan Asal Sekolah" [(ngModel)]="form.Asalsekolah" labelPlacement="floating" fill="outline"></ion-input>
+     <br>
+     <ion-input label="Nilai Raport"  placeholder="Masukan Nilai" [(ngModel)]="form.Nilairaport" labelPlacement="floating" fill="outline" type="number"></ion-input>
+     <br>
+     <ion-input label="No. Telp/Whatsapp" [(ngModel)]="form.NoTelpWhatsapp" labelPlacement="floating" fill="outline" type="number"></ion-input>
+     <br>
+     <ion-input label="Alamat Email" placeholder="Masukan Alamat Email Anda" [(ngModel)]="form.AlamatEmail" labelPlacement="floating" fill="outline"></ion-input>
+     <br>
+     <ion-button (click)="doList()" expand="full">
+      <ion-icon name="send-outline"></ion-icon>
+      Kirim</ion-button>
+  </div>
+</ion-content>

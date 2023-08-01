@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Input Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label>History Scan</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let data of data;let i = index">
+        <ion-label>{{ i + 1 }}. {{data.Nama}} | {{ data.Prodi }} | {{ data.Tempatlahir }}</ion-label>
+        <!-- show maps -->
+        <!-- <ion-button (click)="showMap(d)"> -->
+          <!-- <ion-icon name="map"></ion-icon>
+        </ion-button> -->
+        <ion-icon (click)="edit(i)" name="create-outline"></ion-icon>
+        <ion-icon (click)="delete( i )" name="trash-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
